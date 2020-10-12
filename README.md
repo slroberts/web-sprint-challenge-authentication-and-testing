@@ -49,8 +49,8 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 Your finished project must include all of the following requirements:
 
-- [ ] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
-- [ ] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
+- [x] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
+- [x] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
 - [ ] Configuration for running tests using `Jest`.
 - [ ] A **minimum o 2 tests** per API endpoint.
 
@@ -64,7 +64,7 @@ After finishing your required elements, you can push your work further. These go
 
 - [ ] Write at least 4 tests per endpoint.
 - [ ] Extract user validation into a separate method and write unit tests for it.
-- [ ] Use a separate testing database for the endpoint tests.
+- [x] Use a separate testing database for the endpoint tests.
 - [ ] Implement authentication with the other method, if you used JWTs for MVP use sessions for stretch and vice versa.
 
 ## Submission format
