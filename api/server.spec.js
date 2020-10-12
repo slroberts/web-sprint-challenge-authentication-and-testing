@@ -18,6 +18,14 @@ describe('server', () => {
       expect(res.status).toBe(500);
     });
 
+    it('should return 500 if password missing', async () => {
+      const res = await request(server)
+        .post('/api/auth/register')
+        .send({ username: 'user', password: '' });
+
+      expect(res.status).toBe(500);
+    });
+
     it('should return 201 on success', async () => {
       const res = await request(server)
         .post('/api/auth/register')
