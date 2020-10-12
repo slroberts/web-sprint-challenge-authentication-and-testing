@@ -5,17 +5,17 @@ const db = require('../database/dbConfig');
 
 describe('server', () => {
   describe('POST /api/auth/login', () => {
-    it('should return 202 on success', () => {
+    it('should return 200 on success', () => {
       return request(server)
-        .post('/api/auth/login')
+        .post('/login')
         .send({ username: 'user1', password: 'password' })
         .then((res) => {
-          expect(res.status).toBe(202);
+          expect(res.status).toBe(200);
         });
     });
     it('should return a message with a welcome message and an auth token', () => {
       return request(server)
-        .post('/api/auth/login')
+        .post('/login')
         .send({ username: 'user1', password: 'password' })
         .then((res) => {
           expect(res.body).toMatchObject({
@@ -33,7 +33,7 @@ describe('server', () => {
 
     it('should return 201 on success', () => {
       return request(server)
-        .post('/api/auth/register')
+        .post('/register')
         .send({ username: 'user1', password: 'password' })
         .then((res) => {
           expect(res.status).toBe(201);
@@ -41,7 +41,7 @@ describe('server', () => {
     });
     it('should return a message with an id, a hashed password, and a username', () => {
       return request(server)
-        .post('/api/auth/register')
+        .post('/register')
         .send({ username: 'user1', password: 'password' })
         .then((res) => {
           expect(res.body[0]).toMatchObject({
