@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -73,7 +75,7 @@ router.post('/login', async (req, res, next) => {
 
 function generateToken(user) {
   const payload = {
-    userId: user.id,
+    subject: user.id,
     username: user.username,
   };
 
