@@ -26,11 +26,22 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+JSON web tokens have cryptographic signatures, while session cookies do not.
+Session cookies are stored in the server’s memory, so it uses lot more resources if the website or app sees a lot of traffic. JSON web tokens are stateless, they can potentially save on server resources in many cases.
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+Bcrypt allows us to hash passwords before we store them.
 
 3. How are unit tests different from integration and end-to-end testing.
 
+Unit test can be performed at any time but it does not verify whether your code works with external dependencies correctly.
+
+Integration tests verify that your code works with external dependencies correctly and is usually carried out after Unit Testing and before System Testing.
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+Encourages you to write the smallest possible test that is necessary to meet the needs of the actively developed feature.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -71,6 +82,6 @@ After finishing your required elements, you can push your work further. These go
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete after receiving your pull-request
+- [x] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete after receiving your pull-request
